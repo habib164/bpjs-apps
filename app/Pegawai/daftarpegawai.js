@@ -11,29 +11,28 @@ import {
 } from "react-native";
 import { Row, Rows, Table } from "react-native-table-component";
 
-const TagihanPulsa = () => {
-	const [headTable, setHeadTable] = useState(["Nama Barang", "Jumlah"]);
+const DaftarPegawai = () => {
+	const [headTable, setHeadTable] = useState(["No", "Nama", "NPP"]);
 	const [dataTable, setDataTable] = useState([
-		["Kertas", "5"],
-		["Pulpen", "5"],
-		["Spidol", "5"],
-		["Paper Clip", "5"],
+		["1", "Gatot Subroto", "1234567890"],
+		["2", "Gatot Subroto", "1234567890"],
+		["3", "Gatot Subroto", "1234567890"],
+		["4", "Gatot Subroto", "1234567890"],
 	]);
-
 	return (
 		<SafeAreaView style={styles.container}>
 			<ScrollView>
 				<Image source={require("../../logo-bpjs.png")} style={styles.img} />
 				<View style={{ paddingHorizontal: 20 }}>
-					<Text style={{ fontSize: 13, fontWeight: "bold" }}>Nama Barang</Text>
+					<Text style={{ fontSize: 13, fontWeight: "bold" }}>Nama</Text>
 					<TextInput
-						placeholder="Masukkan Nama Barang"
+						placeholder="Masukkan Nama"
 						keyboardType="default"
 						style={styles.txtInput}
 					/>
-					<Text style={{ fontSize: 13, fontWeight: "bold" }}>Jumlah</Text>
+					<Text style={{ fontSize: 13, fontWeight: "bold" }}>NPP</Text>
 					<TextInput
-						placeholder="Masukkan Jumlah"
+						placeholder="Masukkan NPP"
 						keyboardType="number-pad"
 						style={styles.txtInput}
 					/>
@@ -58,7 +57,7 @@ const TagihanPulsa = () => {
 	);
 };
 
-export default TagihanPulsa;
+export default DaftarPegawai;
 
 const styles = StyleSheet.create({
 	container: {
