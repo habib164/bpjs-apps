@@ -9,6 +9,7 @@ import {
 } from "react-native";
 import { Colors } from "react-native/Libraries/NewAppScreen";
 import { db } from "../../firebaseConfig";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 import {
     getFirestore,
     collection,
@@ -40,6 +41,8 @@ const LoginPegawai = ({ navigation }) => {
 
         if (user) {
             console.log("masuk", user);
+            await AsyncStorage.setItem("nama_pegawai", name);
+            await AsyncStorage.setItem("npp", npp);
             navigation.navigate("Pegawai");
         } else {
             console.log("error");

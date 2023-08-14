@@ -21,6 +21,7 @@ import {
     serverTimestamp,
     addDoc,
 } from "firebase/firestore";
+import AsyncStorage from "@react-native-async-storage/async-storage";
 const PermintaanATK = () => {
     const [namaBarang, setNamaBarang] = useState("");
     const [jumlah, setJumlah] = useState();
@@ -54,9 +55,13 @@ const PermintaanATK = () => {
         try {
             const checkStock = getStockAtk();
             if (!checkStock) throw new Error("Gagal");
+            const nama_pegawai = await AsyncStorage.getItem("nama_pegawai");
+            const npp = await AsyncStorage.getItem("npp");
             const requestAtkCollection = collection(db, "request_atk");
             await addDoc(requestAtkCollection, {
                 nama_barang: namaBarang,
+                nama_pegawai: nama_pegawai,
+                npp: npp,
                 jumlah: parseInt(jumlah),
                 keterangan: keterangan,
                 status: "pending",
