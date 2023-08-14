@@ -9,7 +9,7 @@ import {
 	TouchableOpacity,
 } from "react-native";
 
-const Notifikasi = () => {
+const NotifikasiAdmin = () => {
 	return (
 		<SafeAreaView style={{ flex: 1, backgroundColor: "white" }}>
 			<ScrollView>
@@ -17,13 +17,24 @@ const Notifikasi = () => {
 				<View style={{ paddingHorizontal: 20 }}>
 					<View style={styles.cardContainer}>
 						<View style={styles.rowTop}>
-							<Text>Nama barang</Text>
+							<View>
+								<Text>Nama : Gatot</Text>
+								<Text>NPP : 1234</Text>
+							</View>
 							<Text>Tanggal Pengajuan</Text>
 						</View>
 						<View style={styles.underline} />
 						<View style={styles.rowName}>
+							<Text>Nama Barang</Text>
 							<Text>Jumlah Barang</Text>
-							<Text style={styles.acc}>Status</Text>
+						</View>
+						<View style={styles.rowBtn}>
+							<TouchableOpacity style={styles.btnAcc}>
+								<Text style={{ color: "white" }}>Terima</Text>
+							</TouchableOpacity>
+							<TouchableOpacity style={styles.btnReject}>
+								<Text style={{ color: "white" }}>Tolak</Text>
+							</TouchableOpacity>
 						</View>
 					</View>
 				</View>
@@ -32,18 +43,9 @@ const Notifikasi = () => {
 	);
 };
 
-export default Notifikasi;
+export default NotifikasiAdmin;
 
 const styles = StyleSheet.create({
-	acc: {
-		color: "#22C55E",
-	},
-	pending: {
-		color: "#EAB308",
-	},
-	reject: {
-		color: "#EF4444",
-	},
 	img: {
 		width: 280,
 		height: 43,
