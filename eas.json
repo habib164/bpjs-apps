@@ -1,0 +1,18 @@
+{
+  "build": {
+    "BPJSApps": {
+      "android": {
+        "buildType": "apk"
+      }
+    },
+    "BPJSApps2": {
+      "android": {
+        "gradleCommand": ":app:assembleRelease"
+      }
+    },
+    "BPJSApps3": {
+      "developmentClient": true
+    },
+    "production": {}
+  }
+}

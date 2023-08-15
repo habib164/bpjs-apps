@@ -5,6 +5,14 @@
       "bundler": "metro"
     },
     "name": "BPJS-Cabang-Meulaboh",
-    "slug": "BPJS-Cabang-Meulaboh"
+    "slug": "BPJS-Cabang-Meulaboh",
+    "extra": {
+      "eas": {
+        "projectId": "fc26d0b1-17bd-41f0-bec3-0bfbeb5d703c"
+      }
+    },
+    "android": {
+      "package": "com.dev.BPJSCabangMeulaboh"
+    }
   }
 }
