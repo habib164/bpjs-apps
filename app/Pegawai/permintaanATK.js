@@ -141,9 +141,13 @@ const PermintaanATK = () => {
 						borderRadius: 10,
 						marginBottom: 20,
 						textAlignVertical: "top",
-						padding: 50,
+						padding: 10,
 					}}
-					multiline={true}
+					editable
+					multiline
+					numberOfLines={4}
+					placeholder="Keterangan"
+					textAlignVertical="top"
 					onChangeText={(value) => setKeterangan(value)}
 				/>
 			</View>
