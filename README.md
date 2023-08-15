@@ -14,4 +14,4 @@ npx create-expo-app -e with-router
 - [Expo Router: Repo](https://github.com/expo/router)
 
 ## Download APK: 
-- [`bit.ly/BPJS-App`](bit.ly/BPJS-Apps)
+- [`Download`](https://drive.google.com/file/d/1G5kxaw8O14LkJx15fXOYGDbZi3SHpmZv/view)
