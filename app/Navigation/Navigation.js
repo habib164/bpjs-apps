@@ -18,6 +18,8 @@ import Pengemudi from "../Pegawai/permintaanPengemudi";
 import Loginadmin from "../admin/loginadmin";
 import Admin from "../admin/admin";
 import NotifikasiAdmin from "../Pegawai/NotifikasiAdmin";
+import StokATK from "../Pegawai/stokATK";
+import Pengaduan from "../Pegawai/pengaduan";
 
 const Stack = createNativeStackNavigator();
 const Drawer = createDrawerNavigator();
@@ -27,7 +29,7 @@ function Home() {
 		<Drawer.Navigator>
 			<Drawer.Screen name="Beranda" component={pegawaipage} />
 			<Drawer.Screen name="Notifikasi" component={Notifikasi} />
-			{/* <Drawer.Screen name="Pengaduan" component={pengaduan} /> */}
+			<Drawer.Screen name="Pengaduan" component={Pengaduan} />
 			<Drawer.Screen name="Permintaan" component={permintaan} />
 			<Drawer.Screen name="Tagihan Pulsa" component={tagihanPulsa} />
 			<Drawer.Screen name="Catatan Histori" component={catatanHistori} />
@@ -41,8 +43,8 @@ function AdminPage() {
 			<Drawer.Screen name="Beranda" component={pegawaipage} />
 			<Drawer.Screen name="Notifikasi" component={NotifikasiAdmin} />
 			<Drawer.Screen name="Daftar Pegawai" component={DaftarPegawai} />
-			<Drawer.Screen name="Daftar Pengemudi" component={permintaan} />
-			<Drawer.Screen name="Stok ATK" component={tagihanPulsa} />
+			{/* <Drawer.Screen name="Daftar Pengemudi" component={permintaan} /> */}
+			<Drawer.Screen name="Stok ATK" component={StokATK} />
 			<Drawer.Screen name="Catatan Histori" component={catatanHistori} />
 		</Drawer.Navigator>
 	);
